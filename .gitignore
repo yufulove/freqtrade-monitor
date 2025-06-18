@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-workspace
+
+# SQLite
+*.sqlite3
+*.db3
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Celery
+celerybeat-schedule
+
+# SASS / SCSS cache
+.sass-cache/
+
+# Node.js / Frontend
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+.coverage
+coverage.xml
+htmlcov/
+
+# Docker
+docker-compose.override.yml
+
+# Secrets (example, actual secrets should be handled by Docker/K8s secrets)
+secrets/
+*.pem
+*.key
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
