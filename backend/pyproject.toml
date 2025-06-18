@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "freqtrade-monitor-backend"
+version = "0.1.0"
+description = "Backend for Freqtrade Multi-Account Monitoring System"
+authors = ["Your Name <you@example.com>"] # Replace with your details
+readme = "README.md" # Assuming a README.md in the backend directory or link to main one
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.25"}
+pydantic = {extras = ["email"], version = "^2.5.3"}
+pydantic-settings = "^2.1.0"
+apscheduler = "^3.10.4"
+python-binance = "^1.0.19"
+redis = {extras = ["hiredis"], version = "^5.0.1"} # redis-py is now just 'redis'
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+cryptography = "^42.0.0"
+alembic = "^1.13.1"
+asyncpg = "^0.29.0" # Asynchronous PostgreSQL driver
+python-dotenv = "^1.0.1"
+# For webhook HMAC signature verification if needed
+# itsdangerous = "^2.1.2"
+python-multipart = "^0.0.20"
+psycopg2-binary = "^2.9.10"
+prometheus-client = "^0.19.0"
+sentry-sdk = {extras = ["fastapi"], version = "^1.40.0"}
+pyotp = "^2.9.0"
+qrcode = {extras = ["pil"], version = "^8.2"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-asyncio = "^0.23.3"
+httpx = "^0.26.0" # For testing FastAPI endpoints
+black = "^23.12.1"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true # Can be set to false for stricter checks later
